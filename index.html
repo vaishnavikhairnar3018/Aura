@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura - James Webb Space Telescope (JWST) Discoveries</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Aura - Experience the wonders of space exploration with breathtaking images and music from the James Webb Space Telescope (JWST).">
+
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="Name">Aura</a>
+        <ul>
+            <li><a href="#" id="sec" class="active">Home</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="explore.html">APOD </a></li>
+            <li><a href="discoveries.html">Discoveries</a></li>
+           
+            
+        </ul>
+    </header>
+    <section>
+        <img src="./Assets/stars.png" id="stars">
+        <img src="./Assets/jwstmoon.png" id="moon">
+        <h4 id="text" >Celestial Symphony</h4>
+        </section>
+        
+    <div class="sect" >
+        <h2>Experience the Cosmos</h2>
+        <img src="./Assets/scope.jpg" class="scope">
+        <p>
+            The James Webb Space Telescope (JWST) is opening a new chapter in space exploration, revealing the secrets of the universe like never before. From distant galaxies to the birth of stars, JWST is helping us unlock mysteries that were previously out of reach. Aura, through the project Symphony of the Stars, brings these amazing discoveries to life by combining stunning visuals from JWST with captivating music.
+            <br><br>On Aura, users are invited to explore space in a way that’s both engaging and inspiring. As they navigate through breathtaking images of glowing nebulae and distant planets, they are guided by a musical experience that enhances the journey. Each image is paired with a soundtrack to create a magical, immersive experience, making space exploration more personal and exciting.
+            <br><br>At its core, Aura aims to make the wonders of space easy to understand and enjoyable for everyone. With Symphony of the Stars, we hope to inspire curiosity and a sense of awe in people of all ages, connecting them with the incredible beauty of the universe.
+        </p>
+    </div>
+     <div class="jwst-video">
+    <video src="./Assets/JWST_L2_Orbit_Animation_HD.webm" autoplay loop muted id="jwst-video"></video>
+    <p>
+        James Webb Space Telescope's Orbit
+The James Webb Space Telescope orbits the Sun, not Earth, from a special spot called the second Lagrange point (L2), which is about 1.5 million kilometers (1 million miles) away. This unique position allows Webb to stay in line with Earth as it travels around the Sun, keeping it safe from the Sun's light and heat thanks to its large sunshield. This setup ensures the telescope can make its amazing observations without interference!
+    </p>
+</div>
+
+<div class="music">
+    <video src="./Assets/music.mp4"  id="music-jwst" controls>music- video</video>
+    
+    <p>
+        This artist's concept shows a bright white galaxy surrounded by swirling blue nebula-like clouds, evoking the birth of stars. A rare golden arc, shaped like a jellyfish galaxy, is formed by cosmic gravitational forces. Accompanied by majestic music, the crescendos reflect the dynamic movements of stars. The deep field image reveals countless galaxies, with ambient music echoing the vast silence of space, offering a soundtrack to the universe's endless beauty.
+    </p>
+</div>
+<footer>
+    <div class="about-us">
+       <h3>About Us</h3>
+
+       <p>
+        Vaishnavi Khairnar [Front-end]
+
+        Email : vaishnavikhairnar799@gmail.com
+        <br><br>
+        Krishna Barot [Researcher,Graphics]
+        
+        Email : krishnabarot025@gmail.com
+        <br><br>
+        Vaishnavi Rawal [Researcher]
+        
+        Email : rawalvaishnavi71@gmail.com
+       </p>
+
+       <h5>© 2024 Aura. All Rights Reserved.</h5>
+
+    </div>
+</footer>
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let text = document.getElementById('text');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1 + 'px';
+            header.style.top = value * 0 + 'px';
+            })
+            
+
+
+    </script>
+
+
+      
+
+
+
+
+</body>
+</html>

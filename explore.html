@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - Aura</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="Name">Aura</a> <!-- Link back to the main page -->
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="explore.html">APOD</a></li> <!-- Explore page link -->
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </header>
+
+    <section id="nasa-image" class="apod-section">
+        <h2>Astronomy Picture of the Day</h2> 
+        <div class="apod-container">
+            <img id="apod-image" src="" alt="APOD Image"> 
+            <div class="apod-info">
+                <h3 id="apod-title"></h3> 
+                <p id="apod-date"></p> 
+                <p id="apod-description"></p>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+        const apiKey = 'd6ecR8kCedWZotSRNpLhC6Hwgf9ETdvuH4le4pHV';
+        const apiURL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+    
+        fetch(apiURL)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('apod-image').src = data.url;
+            document.getElementById('apod-title').innerText = data.title;
+            document.getElementById('apod-date').innerText = data.date;
+            document.getElementById('apod-description').innerText = data.explanation;
+        });
+    </script>
+    
+</body>
+</html>
